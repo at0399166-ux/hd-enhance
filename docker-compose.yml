@@ -1,0 +1,10 @@
+services:
+  hd-enhance:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MAX_UPLOAD_MB: 500
+    volumes:
+      - ./backend/uploads:/app/backend/uploads
+      - ./backend/outputs:/app/backend/outputs

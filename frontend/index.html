@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>HD Enhance</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="logo">✦</div>
+    <div><h1>HD Enhance</h1><p>Photo & Video Enhancer</p></div>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab active" data-type="image">📷 Photo</button>
+      <button class="tab" data-type="video">🎬 Video</button>
+    </div>
+
+    <section class="card">
+      <label class="drop">
+        <input id="file" type="file" accept="image/*">
+        <span class="upload-icon">＋</span>
+        <b>Choose a file</b>
+        <small>Tap here to select from your phone</small>
+      </label>
+
+      <div id="fileInfo" class="file-info hidden"></div>
+
+      <div class="controls">
+        <label>Upscale <select id="scale">
+          <option value="1">1×</option><option value="2" selected>2×</option>
+          <option value="3">3×</option><option value="4">4×</option>
+        </select></label>
+
+        <label>Sharpen <input id="sharpen" type="range" min="0" max="2" step=".1" value="1"></label>
+        <label>Denoise <input id="denoise" type="checkbox" checked></label>
+      </div>
+
+      <button id="enhance" class="primary" disabled>✨ Enhance</button>
+      <div id="status" class="status"></div>
+      <a id="download" class="download hidden" target="_blank">⬇ Download enhanced file</a>
+    </section>
+
+    <section class="info">
+      <h2>How it works</h2>
+      <p>Upload → choose enhancement → Enhance → Download.</p>
+      <p class="note">Very low-quality photos cannot be restored perfectly because missing original detail cannot always be recovered.</p>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
